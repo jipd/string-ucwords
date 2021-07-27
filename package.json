@@ -1,0 +1,43 @@
+{
+  "name": "@jipd/string-ucwords",
+  "version": "1.0.0",
+  "description": "Capitalise the first letter of each word",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+      "test": "jest test/*",
+      "build": "rimraf dist && npm run compile",
+      "compile": "babel lib -d dist",
+      "dev": "watch 'npm run compile' ./lib",
+      "prepare": "npm run build",
+      "lint": "eslint ./lib/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jipd/string-ucwords.git"
+  },
+  "keywords": [
+    "javascript",
+    "ucwords"
+  ],
+  "author": "Nathan Bryant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jipd/string-ucwords/issues"
+  },
+  "homepage": "https://github.com/jipd/string-ucwords#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.8",
+    "babel-preset-minify": "^0.5.1",
+    "eslint": "^7.31.0",
+    "jest": "^27.0.6",
+    "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "@jipd/string-ucfirst": "^1.0.0"
+  }
+}
